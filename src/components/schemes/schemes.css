@@ -1,0 +1,17 @@
+.video_container{
+    width: 75%;
+}
+@media screen and (max-width:1024px){
+    .video_container{
+        width:90%;
+    }
+}
+@media screen and (max-width:720px){
+    .video_container{
+        width:100%;
+    }
+}
+.scheme:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
