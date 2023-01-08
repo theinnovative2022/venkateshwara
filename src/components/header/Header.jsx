@@ -11,11 +11,9 @@ export default function Header() {
 	const location = useLocation().pathname;
 	return (
 		<>
-			<div className="container-fluid p-1">
-
-
-				<NavLink className="me-2   " aria-current="page" to="/login"> LOGIN</NavLink>
-				<NavLink className="me-2   " aria-current="page" to="/register"> SIGNUP</NavLink>
+			<div className="container-fluid p-1 col-12 text-end">
+				<NavLink className="me-2 border border-1 p-1 text-decoration-none btn btn-info text-white btn-sm" aria-current="page" to="/login"> LOGIN</NavLink>
+				<NavLink className="me-2 border border-1 p-1 text-decoration-none btn btn-info text-white btn-sm" aria-current="page" to="/register"> SIGNUP</NavLink>
 			</div>
 
 			<nav className="navbar navbar-expand-lg navbar-light shadow-sm bg-light mb-2">
@@ -39,7 +37,6 @@ export default function Header() {
 								<div className="dropdown-menu m-0">
 									<NavLink to="/services/ecommerce" className="dropdown-item">ECOMMERCE</NavLink>
 									<NavLink to="/services/permissions" className="dropdown-item">PERMISSIONS</NavLink>
-
 								</div>
 							</div>
 							<div className="nav-item dropdown">
@@ -57,9 +54,7 @@ export default function Header() {
 							<li className="nav-item">
 								<NavLink className="nav-link active" aria-current="page" to="/contact">CONTACT</NavLink>
 							</li>
-
 						</ul>
-
 					</div>
 				</div>
 			</nav >

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Not Found</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    *{
+      font-family: Inter,monospace;
+      user-select: none;
+    }
+    p{
+      margin:0rem;
+    }
+    body{
+      width: 100%;
+      height: 100%;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      justify-items: center;  
+    }
+    .container{
+      width: 80%;
+      height: 90vh;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      margin: 0 2rem;
+    }
+    .container .f404{
+      font-size: 9rem;
+      font-weight: bold;
+      margin: 0.1rem;
+      color: #dd3636;
+    }
+    .container .notFound{
+      font-size: 2.5rem;
+      margin: 0px;
+      line-height: 1.7rem;
+      margin-bottom: 0.4rem;
+    }
+    .container .description{
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .container a{
+      text-decoration: none;
+      text-underline-offset: 3px;
+      border: 1px solid transparent;
+      padding:0.4rem 1rem;
+      transition: ease-in 0.2s;
+      border-radius: 5%;
+      font-size: large; 
+      color:blue
+    }
+    .container a:hover{
+      /* color: black; */
+      border-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p class="f404">404</p>
+    <p class="notFound">Not Found</p>
+    <p class="description">
+      The page you were trying to access does not exist.
+      Go to the homepage by clicking link below.
+    </p>
+
+    <a href="http://localhost:3000" target="_self">Homepage</a>
+  </div>
+</body>
+</html>

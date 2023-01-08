@@ -54,45 +54,45 @@ export default function Home() {
                 {/* <!-- Services Start --> */}
                 <div className="container-fluid">
                     <div className="container">
-                    <div className="text-center">
-						<p className="d-inline-block text-center text-uppercase border-bottom border-dark border-3 fw-bold fs-5 p-2 mb-0">
-							Citizens Services
-						</p>
-					</div>
+                        <div className="text-center">
+                            <p className="d-inline-block text-center text-uppercase border-bottom border-dark border-3 fw-bold fs-5 p-2 mb-0">
+                                Citizens Services
+                            </p>
+                        </div>
                         <div className="row g-3 mt-3">
-                           
+
                             <div className="col-lg-2 col-md-6">
-                                <div className="service-item bg-light text-center p-5 ">
+                                <div className="service-item  text-center p-5 ">
                                     <img src="/img/grievance.png" alt="" />
                                     <p>Grievance</p>
                                 </div>
                             </div>
                             <div className="col-lg-2 col-md-6">
-                                <div className="service-item2 bg-light text-center p-5 ">
+                                <div className="service-item2  text-center p-5 ">
                                     <img src="/img/scheme.png" alt="" />
                                     <p>Schemes</p>
                                 </div>
                             </div>
                             <div className="col-lg-2 col-md-6">
-                                <div className="service-item bg-light text-center p-5 ">
+                                <div className="service-item  text-center p-5 ">
                                     <img src="/img/help.png" alt="" />
                                     <p>Help</p>
                                 </div>
                             </div>
                             <div className="col-lg-2 col-md-6">
-                                <div className="service-item2 bg-light text-center p-5 ">
+                                <div className="service-item2  text-center p-5 ">
                                     <img src="/img/grievance.png" alt="" />
                                     <p>Schemes</p>
                                 </div>
                             </div>
                             <div className="col-lg-2 col-md-6">
-                                <div className="service-item bg-light text-center p-5 ">
+                                <div className="service-item  text-center p-5 ">
                                     <img src="/img/grievance.png" alt="" />
                                     <p>Schemes</p>
                                 </div>
                             </div>
                             <div className="col-lg-2 col-md-6">
-                                <div className="service-item2 bg-light text-center p-5 ">
+                                <div className="service-item2  text-center p-5 ">
                                     <img src="/img/grievance.png" alt="" />
                                     <p>Schemes</p>
                                 </div>
@@ -451,6 +451,63 @@ export default function Home() {
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <div className='border border-dark rounded border-2 position-relative' style={{ minHeight: "370px" }}>
+                                        <div className="row">
+                                            <div className="col">
+                                                <div className="">
+                                                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                                                        <div class="carousel-inner">
+                                                            <div class="carousel-item active" data-bs-interval="1000">
+                                                                <img src="https://content.jdmagicbox.com/comp/mumbai/60/022p9007860/catalogue/gallops-restaurant-mahalaxmi-mumbai-continental-restaurants-rzvpsxq8hr.jpg?clr=#660027?fit=around%7C270%3A130&crop=270%3A130%3B%2A%2C%2A" height={200} class="d-block w-100" alt="..." />
+                                                            </div>
+                                                            <div class="carousel-item" data-bs-interval="1000">
+                                                                <img src="https://content.jdmagicbox.com/comp/mumbai/60/022p9007860/catalogue/gallops-restaurant-mahalaxmi-mumbai-continental-restaurants-rzvpsxq8hr.jpg?clr=#660027?fit=around%7C270%3A130&crop=270%3A130%3B%2A%2C%2A" height={200} class="d-block w-100" alt="..." />
+                                                            </div>
+                                                            <div class="carousel-item" data-bs-interval="1000">
+                                                                <img src="https://content.jdmagicbox.com/comp/mumbai/60/022p9007860/catalogue/gallops-restaurant-mahalaxmi-mumbai-continental-restaurants-rzvpsxq8hr.jpg?clr=#660027?fit=around%7C270%3A130&crop=270%3A130%3B%2A%2C%2A" height={200} class="d-block w-100" alt="..." />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="p-2 position-absolute w-100 bottom-0">
+                                            <div className="row">
+                                                <h5>Tushar Snacks</h5>
+                                                <p>Nashik, aurangabad road, near mandir 422004</p>
+                                                <div className="col">
+                                                    <div className=' fs-1'>
+                                                        <Link className="text-decoration-none text-body">
+                                                            <p className='fs-2'>
+                                                                <IoCallSharp />
+                                                            </p>
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                                <div className="col">
+                                                    <div className='fs-1'>
+                                                        <Link className=" text-decoration-none text-body">
+                                                            <p className='fs-2'>
+                                                                <FaShare />
+                                                            </p>
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                                <div className="col">
+                                                    <div className='fs-1'>
+                                                        <Link className="col text-decoration-none text-body">
+                                                            <p className='fs-2'>
+                                                                <FaMapMarkerAlt />
+                                                            </p>
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className='border border-dark rounded border-2 position-relative' style={{ minHeight: "370px" }}>
+
                                         <div className="row">
                                             <div className="col">
                                                 <div className="">

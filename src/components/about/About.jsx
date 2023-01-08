@@ -4,6 +4,7 @@ import Tree from "./Tree";
 import logo from '../../logo.svg';
 import { useState } from "react";
 import './about.css'
+import { AiFillCloseCircle, AiFillRightCircle, AiFillLeftCircle } from 'react-icons/ai'
 import { Navigation, A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -12,17 +13,84 @@ import 'swiper/css/navigation';
 
 export default function About() {
 
-	const galleryData = [logo, logo, logo, logo, logo, logo, logo];
-	console.log(galleryData.length);
-
-	const [gallery, setGallery] = useState(galleryData);
-	console.log(gallery.length);
 
 
+	const photos = [
+		{
+			img: "https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=",
+		},
+		{
+			img: "https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=",
+		},
 
+		{
+			img: "https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=",
+		},
+		{
+			img: "https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=",
+		},
+		{
+			img: "https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=",
+		},
+		{
+			img: "https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=",
+		},
+		{
+			img: "https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=",
+		},
+		{
+			img: "https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=",
+		},
+		{
+			img: "https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=",
+		},
+		{
+			img: "https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=",
+		},
+		{
+			img: "https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=",
+		},
+	];
+
+	const [slideNumber, setSlideNumber] = useState(0)
+	const [openModal, setOpenModal] = useState(false)
+
+
+	//open modal
+	const handleOpenModal = (index) => {
+		setSlideNumber(index)
+		setOpenModal(true)
+	}
+
+	// close modal
+	const handleCloseModal = (index) => {
+		setOpenModal(false)
+	}
+
+	//left slide
+	const preSlide = (index) => {
+		slideNumber === 0 ? setSlideNumber(photos.length - 1) : setSlideNumber(slideNumber - 1)
+	}
+
+	//right slide
+	const nextSlide = (index) => {
+		slideNumber + 1 === photos.length ? setSlideNumber(0) : setSlideNumber(slideNumber + 1)
+	}
 
 	return (
+
 		<>
+			{
+				openModal &&
+				<div className='sliderWrap'>
+					<AiFillCloseCircle className='btnclose' onClick={handleCloseModal} />
+					<AiFillLeftCircle className='btnleft' onClick={preSlide} />
+					<AiFillRightCircle className='btnright' onClick={nextSlide} />
+					<div className='fullScreenImage'>
+						<img src={photos[slideNumber].img} alt="" />
+					</div>
+				</div>
+			}
 			<div className="about_container container-width-auto container">
 				<div className="px-3">
 					<div className="text-center">
@@ -60,7 +128,7 @@ export default function About() {
 					</div>
 				</div>
 
-	
+
 
 				<hr className="border-top border-3 opacity-50 my-4"></hr>
 				<div className="px-3">
@@ -105,12 +173,10 @@ export default function About() {
 							loop={true}
 						>
 							{
-								gallery.map((value, i) => {
+								photos.map((im, index) => {
 									return (
-										<SwiperSlide key={value + i}>
-											<img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-674010.jpg&fm=jpg" alt="galleryImage" className=" border border-3" height="200" />
-										</SwiperSlide>
-									)
+										<SwiperSlide key={"ecommercePhoto" + index}><img src={im.img} onClick={() => handleOpenModal(index)} width="150" alt="ecommercePhotos" /></SwiperSlide>
+									);
 								})
 							}
 						</Swiper>
